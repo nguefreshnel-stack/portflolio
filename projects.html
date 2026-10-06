@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projets – Hamilton Freshnel</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <script>
+      (function() {
+          var saved = localStorage.getItem("portfolio-theme");
+          var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+          if (saved === "dark" || (!saved && prefersDark)) {
+              document.documentElement.classList.add("dark");
+          }
+      })();
+  </script>
+</head>
+<body>
+
+<header class="header">
+  <nav class="navbar">
+    <a href="index.html" class="logo">MonPortfolio</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="skills.html">Compétences</a></li>
+      <li><a class="active" href="projects.html">Projets</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+        <button id="theme-toggle" class="theme-btn" aria-label="Changer de thème">🌙</button>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+  </nav>
+</header>
+
+<main class="section-page">
+  <h1 class="section-title reveal">Mes réalisations & Projets</h1>
+  <p class="reveal delay-1" style="color:var(--text-muted);margin-bottom:24px;font-size:1.05rem;">
+    Explorez les projets conçus en entreprise lors de mon stage chez <strong>INTEK SARL</strong> ainsi que mes solutions fullstack développées avec passion.
+  </p>
+
+  <!-- Filtres interactifs dynamiques -->
+  <div class="projects-filter reveal delay-2">
+    <button class="filter-btn active" data-filter="all">Tous les projets (3)</button>
+    <button class="filter-btn" data-filter="stage">⭐ Stage INTEK SARL</button>
+    <button class="filter-btn" data-filter="fullstack">Fullstack (Angular / Spring / Laravel)</button>
+    <button class="filter-btn" data-filter="mobile">Mobile & UI/UX</button>
+  </div>
+
+  <!-- Grille dynamique des projets -->
+  <div class="projects-grid" id="dynamic-projects-grid">
+    <!-- Le contenu est alimenté et filtré dynamiquement via script.js -->
+  </div>
+
+  <div style="text-align:center;margin-top:50px;" class="reveal delay-3">
+    <a class="btn btn-secondary" href="https://github.com/nguefreshnel-stack" target="_blank" rel="noopener noreferrer">
+      Explorer mon compte GitHub complet &rarr;
+    </a>
+  </div>
+</main>
+
+<!-- Modale de détails de projet -->
+<div id="project-modal" class="project-modal" aria-hidden="true" role="dialog">
+  <div class="modal-overlay"></div>
+  <div class="modal-container">
+    <div class="modal-header">
+      <h3 id="modal-title" class="modal-title">Détails du projet</h3>
+      <button class="modal-close" aria-label="Fermer la modale">&times;</button>
+    </div>
+    <div id="modal-body-content" class="modal-body">
+      <!-- Rempli dynamiquement -->
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2026 — Hamilton Freshnel Ngue. Tous droits réservés.
+</footer>
+
+</body>
+</html>

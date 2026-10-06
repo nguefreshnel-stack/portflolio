@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>À propos – Hamilton Freshnel</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <script>
+        (function() {
+            var saved = localStorage.getItem("portfolio-theme");
+            var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+            if (saved === "dark" || (!saved && prefersDark)) {
+                document.documentElement.classList.add("dark");
+            }
+        })();
+    </script>
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar">
+        <a href="index.html" class="logo">MonPortfolio</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a class="active" href="about.html">À propos</a></li>
+            <li><a href="skills.html">Compétences</a></li>
+            <li><a href="projects.html">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="theme-btn" aria-label="Changer de thème">🌙</button>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<main class="section-page">
+    <h1 class="section-title reveal">Qui suis-je ? Je suis NGUE HAMILTON FRESHNEL</h1>
+
+    <div class="about-wrapper">
+        <div class="about-info">
+            <div class="about-card reveal delay-1">
+                <h3>Mon profil & Parcours académique</h3>
+                <p>
+                    Titulaire d'un baccalauréat C et actuellement en formation de <strong>Bachelor / Licence en Génie Logiciel</strong>, je combine rigueur analytique, compétences en modélisation (UML / Merise) et maîtrise des technologies web et d'entreprise modernes.
+                </p>
+            </div>
+
+            <div class="about-card reveal delay-2">
+                <h3>Ce qui me passionne</h3>
+                <p>
+                    Concevoir des architectures logicielles découplées et sécurisées (Spring Boot, Angular, Laravel), résoudre des problématiques métiers concrètes, optimiser la gestion de données et bâtir des interfaces intuitives et réactives.
+                </p>
+            </div>
+
+            <div class="about-card reveal delay-3">
+                <h3>Mes ambitions professionnelles</h3>
+                <p>
+                    Évoluer en tant qu'<strong>Ingénieur Logiciel Fullstack / DevOps</strong>, piloter la conception de systèmes complexes, contribuer à l'écosystème open-source et approfondir les architectures cloud et microservices.
+                </p>
+            </div>
+        </div>
+
+        <div class="about-photo reveal delay-4">
+            <img src="images/profile.jpg" alt="Photo de NGUE HAMILTON FRESHNEL" loading="lazy">
+        </div>
+    </div>
+
+    <!-- Timeline des expériences et du stage -->
+    <section style="margin-top:60px;">
+        <h2 class="section-subtitle reveal delay-2">Expériences & Stages</h2>
+        <div class="timeline reveal delay-3">
+            
+            <!-- STAGE INTEK -->
+            <div class="timeline-card">
+                <div class="timeline-header">
+                    <span class="timeline-role">Stagiaire Développeur Fullstack & Scrum Master</span>
+                    <span class="timeline-period">Juillet 2026 – Septembre 2026</span>
+                </div>
+                <div class="timeline-place">INTEK SARL — Douala, Cameroun (Service Technique)</div>
+                <div class="timeline-details">
+                    <p>
+                        Encadré par <strong>M. Frédéric Chendjou</strong> (Chef de Service Technique) et <strong>M. Timothée Fredy Ngouma</strong> (Encadreur Académique).
+                    </p>
+                    <ul>
+                        <li><strong>Projet central :</strong> Conception et réalisation d'une application web Helpdesk et GMAO de gestion des tickets de maintenance pour le suivi du parc matériel (onduleurs haute puissance 6kVA-20kVA, serveurs, PC, imprimantes).</li>
+                        <li><strong>Développement Fullstack :</strong> Architecture découplée <strong>Angular</strong> + <strong>Spring Boot (Java)</strong> + <strong>MySQL</strong> avec sécurisation JWT, DTOs et endpoints REST.</li>
+                        <li><strong>Fonctionnalités clés :</strong> Voyant d'urgence dynamique sur le dashboard technique, notifications instantanées, panneau latéral interactif (Side Drawer), upload de photos de panne et import par lots (Batch Excel).</li>
+                        <li><strong>Méthodologie & Conception :</strong> Modélisation rigoureuse en <strong>UML</strong> (Cas d'utilisation, Activité 4 couloirs, Séquence, Classes) et pilotage en <strong>Agile SCRUM</strong> par sprints de 2 semaines.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- PROJET MEDIKO -->
+            <div class="timeline-card">
+                <div class="timeline-header">
+                    <span class="timeline-role">Concepteur & Développeur Fullstack</span>
+                    <span class="timeline-period">Projet Récent</span>
+                </div>
+                <div class="timeline-place">Projet MediKo — Gestion Médicale & Pharmacies</div>
+                <div class="timeline-details">
+                    <p>
+                        Développement d'une solution de gestion des stocks pharmaceutiques et cartographie avec <strong>Angular</strong> et <strong>Laravel</strong>. Implémentation du contrôle d'accès multi-rôles (RBAC), journalisation complète des logs d'audit et alertes de stock.
+                    </p>
+                </div>
+            </div>
+
+            <!-- PROJET ACADÉMIQUE -->
+            <div class="timeline-card">
+                <div class="timeline-header">
+                    <span class="timeline-role">UI/UX Designer & Développeur</span>
+                    <span class="timeline-period">Projet Académique</span>
+                </div>
+                <div class="timeline-place">Gestion Scolaire Mobile</div>
+                <div class="timeline-details">
+                    <p>
+                        Conception ergonomique et intégration d'une application mobile pour le suivi des notes, relevés académiques et présences (PHP/MySQL + Node.js).
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    © 2026 — Hamilton Freshnel Ngue. Tous droits réservés.
+</footer>
+
+</body>
+</html>

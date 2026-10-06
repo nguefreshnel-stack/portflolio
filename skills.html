@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences – Hamilton Freshnel</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script>
+        (function() {
+            var saved = localStorage.getItem("portfolio-theme");
+            var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+            if (saved === "dark" || (!saved && prefersDark)) {
+                document.documentElement.classList.add("dark");
+            }
+        })();
+    </script>
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar">
+        <a href="index.html" class="logo">MonPortfolio</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a class="active" href="skills.html">Compétences</a></li>
+            <li><a href="projects.html">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="theme-btn" aria-label="Changer de thème">🌙</button>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<main class="section-page">
+    <h1 class="section-title reveal">Mes compétences techniques</h1>
+    <p class="reveal delay-1" style="color:var(--text-muted);margin-bottom:32px;font-size:1.05rem;">
+        Un ensemble de compétences consolidé par des projets d'envergure et une immersion pratique en entreprise chez INTEK SARL.
+    </p>
+
+    <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="skill-card reveal delay-1">
+            <h3>🎨 Frontend Moderne</h3>
+            <p>Conception d'interfaces réactives, modulaires et adaptées aux exigences métiers avec gestion d'état et composants standalone.</p>
+            <div class="project-tags" style="margin-top:16px;">
+                <span class="tag">Angular</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">RxJS & Signals</span>
+                <span class="tag">SCSS / CSS3</span>
+                <span class="tag">HTML5 Sémantique</span>
+                <span class="tag">Responsive UI</span>
+            </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-card reveal delay-2">
+            <h3>⚙️ Backend & APIs REST</h3>
+            <p>Développement de services robustes, sécurisés et performants respectant les architectures orientées services et les patrons de conception.</p>
+            <div class="project-tags" style="margin-top:16px;">
+                <span class="tag">Spring Boot</span>
+                <span class="tag">Java (17 / 21)</span>
+                <span class="tag">Spring Security / JWT</span>
+                <span class="tag">Laravel (PHP)</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">REST DTOs</span>
+                <span class="tag">C / POO</span>
+            </div>
+        </div>
+
+        <!-- Bases de données & Conception -->
+        <div class="skill-card reveal delay-3">
+            <h3>📐 Modélisation & Bases de Données</h3>
+            <p>Analyse des exigences métiers, conception de modèles relationnels rigoureux et écriture de requêtes SQL optimisées.</p>
+            <div class="project-tags" style="margin-top:16px;">
+                <span class="tag">Modélisation UML</span>
+                <span class="tag">Méthode Merise (MCD/MLD)</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Spring Data JPA / Hibernate</span>
+            </div>
+        </div>
+
+        <!-- Méthodologies & Outils -->
+        <div class="skill-card reveal delay-4">
+            <h3>🚀 Méthodologie & DevOps</h3>
+            <p>Pratiques professionnelles de gestion de projet logiciel, intégration continue et collaboration en équipe.</p>
+            <div class="project-tags" style="margin-top:16px;">
+                <span class="tag">Agile SCRUM (Sprints)</span>
+                <span class="tag">Git & GitHub</span>
+                <span class="tag">Postman (API Testing)</span>
+                <span class="tag">UI/UX Prototyping</span>
+                <span class="tag">DevOps Basics</span>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    © 2026 — Hamilton Freshnel Ngue. Tous droits réservés.
+</footer>
+
+</body>
+</html>

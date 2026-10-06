@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – Hamilton Freshnel | Développeur Fullstack</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script>
+        (function() {
+            var saved = localStorage.getItem("portfolio-theme");
+            var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+            if (saved === "dark" || (!saved && prefersDark)) {
+                document.documentElement.classList.add("dark");
+            }
+        })();
+    </script>
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar">
+        <a href="index.html" class="logo">MonPortfolio</a>
+        <ul class="nav-links">
+            <li><a class="active" href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="skills.html">Compétences</a></li>
+            <li><a href="projects.html">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="theme-btn" aria-label="Changer de thème">🌙</button>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="reveal" style="margin-bottom:12px;">
+            <span class="tag badge-stage" style="font-size:0.9rem;padding:6px 14px;">🎓 Stagiaire Fullstack chez INTEK SARL</span>
+        </div>
+        <h1 class="reveal delay-1">NGUE HAMILTON FRESHNEL</h1>
+        <p class="reveal delay-2" style="max-width:700px;margin:0 auto 28px;">
+            Étudiant en <strong>Génie Logiciel</strong> & Développeur Fullstack passionné.<br>
+            Spécialisé dans la conception d'applications robustes avec <strong>Angular</strong>, <strong>Spring Boot</strong>, <strong>Laravel</strong> et <strong>MySQL</strong>.
+        </p>
+
+        <div class="reveal delay-3" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+            <a href="projects.html" class="btn">Explorer mes projets</a>
+            <a href="about.html" class="btn btn-secondary">Mon stage & parcours</a>
+            <a href="https://www.linkedin.com/in/hamilton-freshnel-ngue-6009173a5" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="display:inline-flex;align-items:center;gap:6px;">💼 LinkedIn</a>
+        </div>
+
+        <!-- Statistiques dynamiques animées -->
+        <div class="hero-stats reveal delay-4">
+            <div class="stat-item">
+                <span class="stat-number" data-target="3" data-suffix="">3</span>
+                <span class="stat-label">Projets Majeurs</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="2" data-suffix=" mois">2 mois</span>
+                <span class="stat-label">Stage INTEK SARL</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="100" data-suffix="%">100%</span>
+                <span class="stat-label">Rigueur & Passion</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 — Hamilton Freshnel Ngue. Tous droits réservés.
+</footer>
+
+</body>
+</html>

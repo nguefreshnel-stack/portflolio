@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact – Hamilton Freshnel</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <script>
+      (function() {
+          var saved = localStorage.getItem("portfolio-theme");
+          var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+          if (saved === "dark" || (!saved && prefersDark)) {
+              document.documentElement.classList.add("dark");
+          }
+      })();
+  </script>
+</head>
+<body>
+
+<header class="header">
+  <nav class="navbar">
+    <a href="index.html" class="logo">MonPortfolio</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="skills.html">Compétences</a></li>
+      <li><a href="projects.html">Projets</a></li>
+      <li><a class="active" href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+        <button id="theme-toggle" class="theme-btn" aria-label="Changer de thème">🌙</button>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+  </nav>
+</header>
+
+<main class="section-page">
+  <div class="contact-container">
+    <h1 class="section-title reveal">Contactez-moi</h1>
+    <p class="contact-intro reveal delay-1">
+      Vous avez un projet en tête, une opportunité de stage, une collaboration technique ou une question ? N'hésitez pas à m'écrire !
+    </p>
+
+    <div class="contact-grid">
+      <div class="contact-card reveal delay-2">
+        <h3>✉️ Emails directs</h3>
+        <p>
+          <a href="mailto:nguefreshnel@gmail.com">nguefreshnel@gmail.com</a><br>
+          <a href="mailto:hamiltongue@icloud.com">hamiltongue@icloud.com</a>
+        </p>
+      </div>
+
+      <div class="contact-card reveal delay-3">
+        <h3>🔗 Réseaux & Profils</h3>
+        <p>
+          <strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/hamilton-freshnel-ngue-6009173a5" target="_blank" rel="noopener noreferrer">linkedin.com/in/hamilton-freshnel-ngue</a><br>
+          <strong>GitHub :</strong> <a href="https://github.com/nguefreshnel-stack" target="_blank" rel="noopener noreferrer">github.com/nguefreshnel-stack</a><br>
+          <strong>Telegram :</strong> <a href="https://t.me/hamiltonngue" target="_blank" rel="noopener noreferrer">t.me/hamiltonngue</a>
+        </p>
+      </div>
+    </div>
+
+    <form class="contact-form reveal delay-4">
+      <div class="form-group">
+        <label for="name">Nom complet</label>
+        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Adresse email</label>
+        <input type="email" id="email" name="email" placeholder="votre.email@exemple.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Parlez-moi de votre projet ou opportunité..." required></textarea>
+      </div>
+
+      <div>
+        <button class="btn" type="submit">Envoyer le message</button>
+      </div>
+    </form>
+  </div>
+</main>
+
+<footer>
+  © 2026 — Hamilton Freshnel Ngue. Tous droits réservés.
+</footer>
+
+</body>
+</html>
